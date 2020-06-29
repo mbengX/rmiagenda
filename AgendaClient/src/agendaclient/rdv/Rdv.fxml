@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="114.0" maxWidth="266.0" prefHeight="114.0" prefWidth="266.0" style="-fx-border-color: #cdcdcd; -fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="agendaclient.rdv.RdvController">
+   <children>
+      <CheckBox fx:id="selectCheckBox" layoutX="219.0" layoutY="6.0" mnemonicParsing="false" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <Label fx:id="titreLabel" layoutX="14.0" layoutY="14.0" text="Anniversaire de Toto" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="13.0" layoutY="48.0" maxHeight="62.0" maxWidth="216.0" minWidth="200.0" prefHeight="62.0" prefWidth="216.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+        <content>
+          <AnchorPane maxWidth="207.0" minHeight="0.0" minWidth="0.0" prefHeight="60.0" prefWidth="207.0">
+               <children>
+                  <Label fx:id="detailLabel" layoutY="3.0" maxWidth="207.0" text="détail" wrapText="true" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <HBox layoutX="6.0" layoutY="25.0" prefHeight="17.0" prefWidth="128.0">
+         <children>
+            <Label text="Heure: " />
+            <Label fx:id="heureLabel" text="22h30" />
+         </children>
+      </HBox>
+      <Label fx:id="periodiciteLabel" layoutX="138.0" layoutY="7.0" text="(Hebdomadaire)">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

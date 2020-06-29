@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.CalendarPicker?>
+
+<AnchorPane id="AnchorPane" prefHeight="488.0" prefWidth="982.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="agendaclient.acceuil.AcceuilController">
+   <children>
+      <AnchorPane layoutX="504.0" layoutY="68.0" prefHeight="434.0" prefWidth="585.0" style="-fx-border-color: #cdcdcd;" AnchorPane.bottomAnchor="44.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Separator layoutX="14.0" layoutY="41.0" prefWidth="200.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0" />
+            <Label layoutX="24.0" layoutY="6.0" text="Rendez-vous du" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+            <ScrollPane layoutX="96.0" layoutY="72.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="35.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="392.0" prefWidth="557.0">
+                     <children>
+                        <FlowPane fx:id="rdvFlowPane" hgap="10.0" layoutX="14.0" layoutY="1.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="391.0" prefWidth="396.0" rowValignment="TOP" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <padding>
+                              <Insets bottom="20.0" left="5.0" top="20.0" />
+                           </padding>
+                        </FlowPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <Label fx:id="dateSelectedLabel" layoutX="102.0" layoutY="11.0" text="date">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ButtonBar layoutX="510.0" layoutY="443.0" prefHeight="27.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+        <buttons>
+          <Button fx:id="ajouterButton" mnemonicParsing="false" onAction="#ajouterOnAction" text="Ajouter" />
+            <Button fx:id="supprimerButton" mnemonicParsing="false" onAction="#supprimerOnAction" text="Supprimer" />
+        </buttons>
+      </ButtonBar>
+      <AnchorPane layoutX="14.0" layoutY="84.0" prefHeight="284.0" prefWidth="351.0" style="-fx-border-color: #cdcdcd;" AnchorPane.bottomAnchor="117.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="84.0">
+         <children>
+            <Separator layoutY="37.0" prefWidth="200.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0" />
+            <Label layoutX="40.0" layoutY="14.0" text="Calendrier" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+            <CalendarPicker fx:id="calendarPicker" layoutX="59.0" layoutY="55.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0" />
+         </children>
+      </AnchorPane>
+      <Hyperlink fx:id="plageDispoHyperlink" layoutX="14.0" layoutY="396.0" onAction="#plageDispoOnAction" text="Chercher une plage disponible" AnchorPane.leftAnchor="14.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" fx:id="nombreDeJourSpinner" prefHeight="400.0" prefWidth="418.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="agendaclient.plagelibre.FindPlageLibreController">
+   <children>
+      <Separator layoutX="43.0" layoutY="88.0" prefWidth="200.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0" />
+      <Label layoutX="37.0" layoutY="6.0" text="Recherche de Plage Disponible" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <GridPane layoutX="70.0" layoutY="64.0" prefHeight="90.0" prefWidth="279.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="129.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.0" minWidth="10.0" prefWidth="171.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Date début" />
+            <Label text="Nombre de jour" GridPane.rowIndex="1" />
+            <DatePicker fx:id="dateDebutPicker" GridPane.columnIndex="1" />
+            <Button fx:id="rechercheButton" mnemonicParsing="false" text="Rechercher" GridPane.rowIndex="2" />
+            <TextField fx:id="nombreDeJourField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <TextArea fx:id="consoleArea" editable="false" layoutX="25.0" layoutY="200.0" prefHeight="186.0" prefWidth="374.0" wrapText="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <font>
+            <Font name="Consolas" size="12.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="15.0" layoutY="183.0" text="Résultat" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="15.0" />
+   </children>
+</AnchorPane>

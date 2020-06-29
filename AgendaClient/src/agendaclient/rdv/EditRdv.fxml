@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.LocalTimePicker?>
+
+<AnchorPane id="AnchorPane" prefHeight="244.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="agendaclient.rdv.EditRdvController">
+   <children>
+      <GridPane layoutX="65.0" layoutY="55.0" prefHeight="210.0" prefWidth="280.0" vgap="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="65.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="73.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.0" minWidth="10.0" prefWidth="207.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Titre" />
+            <Label text="Date" GridPane.rowIndex="1" />
+            <Label text="Heure" GridPane.rowIndex="2" />
+            <Label text="Détail" GridPane.rowIndex="3" />
+            <TextField fx:id="titreField" GridPane.columnIndex="1" />
+            <LocalTimePicker fx:id="heurePicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextArea fx:id="detailArea" prefHeight="57.0" prefWidth="207.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextArea>
+            <Label text="Periodicité" GridPane.rowIndex="4" />
+            <ComboBox fx:id="periodiciteBox" prefHeight="25.0" prefWidth="206.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="date" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
